@@ -1,0 +1,3 @@
+import subprocess, os
+print("🚀 Launching Forge Master Runner…")
+subprocess.call(["python", "os.path.join('forge project','forge_master_runner.py')"])
