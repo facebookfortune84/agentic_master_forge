@@ -1,0 +1,111 @@
+---
+design_the_code_specification:
+  description: Design the complete specification for "THE CODE," a completely new
+    object-oriented programming language. Define its syntax, core data structures,
+    memory management model, and object hierarchy. The language must be built from
+    scratch, rejecting existing paradigms, and must support universal concurrency
+    and dynamic code generation.
+  expected_output: A detailed, full-length document outlining the specification for
+    "THE CODE" programming language, covering its grammar, core libraries, and philosophical
+    approach to agentic computing.
+  agent: chief_language_architect
+diagnose_system_error:
+  description: Analyze the provided error message and trace to identify the root cause
+    of the failure in the primary crew execution. Determine which file (agents.yaml,
+    tasks.yaml, crew.py, or main.py) and specific section requires modification.
+  expected_output: A detailed analysis report that pinpoints the exact cause of the
+    error and suggests a specific fix strategy (e.g., modify task description, adjust
+    agent role, correct file path).
+  agent: error_analyst_and_diagnostics_specialist
+design_the_code_compiler_architecture:
+  description: Based on the specification for "THE CODE," design the architecture
+    for its compiler or interpreter. Detail how the runtime will handle dynamic DSL
+    compilation and ensure high-performance execution of complex agentic tasks. The
+    design must include error handling and dynamic linking mechanisms unique to "THE
+    CODE."
+  expected_output: An architectural design document for "THE CODE" compiler/interpreter,
+    specifying the compiler pipeline and runtime features.
+  agent: compiler_and_runtime_engineer
+  context:
+  - design_the_code_specification
+architect_agent_forge_core_system:
+  description: Design the high-level architecture for the "Agent Forge." This blueprint
+    must detail the agent lifecycle management, including how new unique DSLs are
+    generated for each iteration, how "THE CODE" is utilized to compile agent logic,
+    and how memory modules are assigned and managed. The design should ensure a portable
+    and self-sufficient ecosystem.
+  expected_output: A comprehensive architectural blueprint for the Agent Forge, detailing
+    the flow from DSL generation to code compilation in "THE CODE," memory binding,
+    and final agent deployment.
+  agent: agent_forge_system_architect
+  context:
+  - design_the_code_specification
+  - design_the_code_compiler_architecture
+review_enterprise_security:
+  description: Analyze the designs for "THE CODE" and the "Agent Forge" architecture
+    for potential security vulnerabilities and compliance gaps. Identify risks related
+    to data privacy, agent-to-agent communication, and secure deployment in enterprise
+    environments.
+  expected_output: A detailed security and compliance report with identified risks
+    and recommendations for enterprise-grade hardening of the proposed architecture.
+  agent: enterprise_security_and_compliance_analyst
+  context:
+  - design_the_code_specification
+  - design_the_code_compiler_architecture
+  - architect_agent_forge_core_system
+create_agent_identities:
+  description: 'Develop detailed, high-fidelity dossiers for an initial set of agents.
+    For each agent, define: 1. Identity: Name, Employee Number, Unique Persona, Demeanor.
+    2. Tools & Skillset: Assign specific tools (with documentation) and a corresponding
+    skillset. 3. HIL Interface: Assign communication endpoints (telephone number,
+    email address, messaging endpoint) and define physical traits for AR/VR rendering.
+    4. Cost Model: Calculate an enterprise "pay rate" or charge rate for using the
+    agent.'
+  expected_output: A structured, high-level dossier for a minimum of five agents,
+    detailing their complete identities and operational attributes.
+  agent: autonomous_agent_persona_engineer
+  context:
+  - architect_agent_forge_core_system
+design_ar_vr_hil_environment:
+  description: Design the specifications for the AR/VR and desktop office environments
+    where humans can interact with the newly created agents. This includes rendering
+    the agents with their assigned physical traits and configuring the communication
+    endpoints to function within the HIL environment. Specify haptic feedback, audio
+    processing, and visual rendering requirements.
+  expected_output: A detailed design document for the AR/VR HIL environment, including
+    specifications for agent rendering, interaction protocols, and hardware requirements.
+  agent: human_machine_interface_and_deployment_specialist
+  context:
+  - create_agent_identities
+create_deployment_package:
+  description: Define the containerization strategy for the entire forge and agent
+    workforce. Design the portable deployment package that allows for spinning up
+    a new, unique workforce ecosystem on demand, ensuring all dependencies and "THE
+    CODE" runtime are bundled correctly.
+  expected_output: A comprehensive deployment guide and container specification (e.g.,
+    Dockerfile structure) to ensure portability and ease of replication.
+  agent: agent_forge_system_architect
+  context:
+  - review_enterprise_security
+  - design_ar_vr_hil_environment
+document_agent_forge_portability:
+  description: Consolidate all design documents (language spec, forge blueprint, HIL
+    design, security review, agent dossiers) into a final, comprehensive "Agent Forge
+    Design Document." The documentation must highlight the unique portability feature
+    that allows for each iteration to generate a completely new DSL and new agent
+    identities.
+  expected_output: The final "Agent Forge Design Document" that serves as the blueprint
+    for building the entire system.
+  agent: chief_language_architect
+  context:
+  - create_deployment_package
+generate_code_fix:
+  description: Based on the diagnosis, generate the corrected code or configuration
+    file content to resolve the issue. The output must be the complete, updated content
+    of the necessary file, ready to be written back to disk.
+  expected_output: The complete, updated content of the file that needs to be modified,
+    ready to replace the existing file.
+  agent: code_fixer_and_source_code_update_specialist
+  context:
+  - diagnose_system_error
+  - document_agent_forge_portability

@@ -1,0 +1,23 @@
+[project]
+name = "agentic_masters_genesis_forge"
+version = "0.1.0"
+description = "agentic_masters_genesis_forge using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai[tools]>=0.203.0,<1.0.0"
+]
+
+[project.scripts]
+agentic_masters_genesis_forge = "agentic_masters_genesis_forge.main:run"
+run_crew = "agentic_masters_genesis_forge.main:run"
+train = "agentic_masters_genesis_forge.main:train"
+replay = "agentic_masters_genesis_forge.main:replay"
+test = "agentic_masters_genesis_forge.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
