@@ -1,3 +1,39 @@
-.env
+# Python
 __pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+.venv/
+env/
+ENV/
+venv/
+pip-wheel-metadata/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# VSCode
+.vscode/
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# YAML backups
+ui/backup/
+
+# Node.js (if used)
+node_modules/
+*.tsbuildinfo
+
+# Misc
+*.zip
+*.bak
+*.tmp
+
+

@@ -12,9 +12,12 @@
     "langdesigner",
     "matplotlib",
     "prioritizer",
+    "pycache",
     "pyyaml",
+    "streamlit",
     "Techsolutions",
     "timestamping",
-    "tokenless"
+    "tokenless",
+    "venv"
   ]
 }
