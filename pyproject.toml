@@ -1,5 +1,5 @@
 [project]
-name = "agentic_masters_genesis_forge"
+name = "agentic_masters_genesis_forge_v1_crewai_project"
 version = "1.0.0"
 description = "Realms to Riches | Agentic Master Forge™ — Autonomous Cinematic AI Intelligence Framework"
 authors = [{ name = "Robert Demotto Jr", email = "robert.demotto@example.com" }]
@@ -75,4 +75,7 @@ use_visual_effects = true
 broadcast_system = true
 holographic_mode = true
 performance_overdrive = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["agentic_masters_genesis_forge_v1_crewai_project"]
 
